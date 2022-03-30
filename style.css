@@ -7,11 +7,12 @@
 :root {
     font-size: 10px;
     font-family: sans-serif;
+    --baby-blue: #dae3f0;
 }
 
 div#root {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 250px 1fr;
     height: 100vh;
 }
 
@@ -55,7 +56,7 @@ nav.sidebarMenu a#logo svg.logo-icon {
 /* --------------------  DASHBOARD ------------------ */
 
 .main-content {
-    background-color: #E2E8F0;
+    background-color: var(--baby-blue);
     --spacing: 10px;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -103,7 +104,7 @@ div.header-section .hs2 {
     padding: .65rem 1rem;
     flex: 1;
     max-width: 70%;
-    background-color: #E2E8F0;
+    background-color: var(--baby-blue);
     border-radius: 25px;
 }
 
@@ -161,6 +162,15 @@ button.managing-action {
     width: 8rem;
 }
 
+.grid-container {
+    margin: 10px 0;
+}
+
+.grid-item {
+    margin: 5px;
+    background-color: white;
+}
+
 div.projects {
     grid-row: 2/4;
 }
@@ -171,4 +181,29 @@ div.announcements {
 
 div.trending {
     grid-column: 2/3;
+}
+
+.trending .grid-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    height: 64px;
+}
+
+.trending .random-pfp {
+    border-radius: 25px;
+}
+
+.trending .user-tweet {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-tweet .user-at {
+    font-weight: bold;
+}
+
+.user-tweet .user-at::before {
+    content:'@';
+    font-weight: bold;
 }
