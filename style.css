@@ -65,7 +65,7 @@ nav.sidebarMenu ul {
     --spacing: 10px;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: auto 3fr 3fr;
     gap: var(--spacing);
     padding: 0 var(--spacing);
 }
@@ -89,6 +89,7 @@ div.header-section {
 }
 
 div.header-section .hs2 {
+    justify-content: center;
     align-items: space-between;
 }
 
@@ -128,6 +129,7 @@ img.user-pfp {
 }
 
 .user-greeting {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -167,6 +169,8 @@ button.managing-action {
     width: 8rem;
 }
 
+/* -------- Main Grid Sections --------- */
+
 .grid-container {
     margin: 10px 0;
 }
@@ -176,8 +180,42 @@ button.managing-action {
     background-color: white;
 }
 
+/* ----- Projects ----- */
+
 div.projects {
     grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.projects .grid-item {
+    width: 300px;
+    height: 250px;
+    flex: 1 0 auto;
+    border-left: 7px solid rgb(224, 148, 6);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+    font-size: 1.3rem;
+}
+
+.projects .grid-item .description {
+    height: 80%;
+}
+
+.projects .grid-item .view-actions {
+    align-self: flex-end;
 }
 
 /* ----- Announcements ----- */
