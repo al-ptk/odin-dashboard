@@ -56,6 +56,7 @@ nav.sidebarMenu ul {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    list-style-type: none;
 }
 
 /* --------------------  DASHBOARD ------------------ */
