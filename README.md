@@ -1,5 +1,7 @@
 # odin-dashboard
 
+[See it live](https://al-ptk.github.io/odin-dashboard/)
+
 What I learned with this project:
 - Thins can get messy very fast. I want a system that helps to organically organize code in a way that the mess, if needed to exist, at least is contained.
 - Naming is hard! I want a naming system \ convention.
